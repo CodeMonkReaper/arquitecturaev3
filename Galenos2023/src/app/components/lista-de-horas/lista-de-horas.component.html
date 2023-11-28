@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<body class="body">
+  <div class="container">
+    <mat-card class="horas-card">
+      <mat-card-header class="horas-header">
+        <h2 class="horas-title">Lista de Horas</h2>
+      </mat-card-header>
+      <mat-card-content>
+        <ul class="horas-list">
+          <li *ngFor="let hora of horas" class="hora-item">
+            <div class="hora-details">
+              <p><strong>Fecha:</strong> {{ hora.fecha }}</p>
+              <p><strong>Hora:</strong> {{ hora.hora }}</p>
+              <p><strong>Médico:</strong> {{ hora.medico }}</p>
+              <p><strong>Especialidad:</strong> {{ hora.especialidad }}</p>
+              <p><strong>Motivo Consulta:</strong> {{ hora.motivoConsulta }}</p>
+            </div>
+            <div class="hora-actions">
+              <button mat-button color="warn" (click)="borrarHora(hora.id)">
+                Borrar
+              </button>
+            </div>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</body>
+
+<app-footer></app-footer>

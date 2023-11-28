@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+mat-card {
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+mat-card-header {
+  background-color: #007BFF;
+  color: white;
+}
+
+mat-card-content {
+  padding: 16px;
+  background-color: azure;
+}
+
+strong {
+  color: #007BFF;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); }
+  to { transform: scale(1); }
+}
+
+@keyframes scaleOut {
+  from { transform: scale(1); }
+  to { transform: scale(0.8); }
+}
+
+/* Animación de entrada/salida */
+@keyframes fadeInOut {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.container, mat-card {
+  animation: fadeInOut 0.5s ease-out;
+}
+
+mat-card-header {
+  animation: fadeIn 0.5s ease-out;
+}
+
+mat-card-content {
+  animation: scaleIn 0.5s ease-out;
+}
+
+strong {
+  animation: fadeInOut 0.5s ease-out;
+}

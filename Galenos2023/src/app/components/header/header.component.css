@@ -1,0 +1,38 @@
+mat-toolbar {
+  background-color: #1976D2;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+mat-toolbar span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+mat-toolbar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  transition: background 0.3s ease;
+}
+
+mat-toolbar button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+mat-toolbar button mat-icon,
+mat-toolbar button ng-icon {
+  margin-right: 5px;
+}
+
+mat-toolbar button + button {
+  margin-left: 15px;
+}

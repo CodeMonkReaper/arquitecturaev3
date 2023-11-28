@@ -1,0 +1,42 @@
+<mat-toolbar>
+  <span>Galenos2023</span>
+
+  <p class="ptoolbar">registrate para reservar</p>
+
+  <button
+    *ngIf="!(authService.isLoggedIn$ | async)"
+    (click)="navigateTo('listado-horas')"
+  >
+    <mat-icon>login</mat-icon>
+    <span>listado reservas</span>
+  </button>
+
+  <button
+    *ngIf="!(authService.isLoggedIn$ | async)"
+    (click)="navigateTo('login')"
+  >
+    <mat-icon>login</mat-icon>
+    <span>Iniciar sesión</span>
+  </button>
+
+  <button
+    *ngIf="!(authService.isLoggedIn$ | async)"
+    (click)="navigateTo('registro')"
+  >
+    <mat-icon>person_add</mat-icon>
+    <span>Registrarse</span>
+  </button>
+
+  <button
+    *ngIf="authService.isLoggedIn$ | async"
+    (click)="navigateTo('reservar-hora')"
+  >
+    <ng-icon>bootstrapCalendar2Plus</ng-icon>
+    <span>Reserva de horas</span>
+  </button>
+
+  <button *ngIf="authService.isLoggedIn$ | async" (click)="logout()">
+    <mat-icon>logout</mat-icon>
+    <span>Cerrar sesión</span>
+  </button>
+</mat-toolbar>
